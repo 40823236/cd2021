@@ -133,70 +133,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">task1 << <a href='task1.html'>Previous</a> <a href='W11.html'>Next</a> >> W11<br /><h1>task2</h1>
-<p>使用白窗控制Coppeliasim</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/PffF-6AdBO0" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_JbxYY4hdos" title="YouTube video player" width="560"></iframe></p>
-<p>程式碼參考第一組成員40823245~</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
-import math
-import random
-import time
-import keyboard
-  
-print ('Start')
-  
-# Close eventual old connections
-vrep.simxFinish(-1)
-# Connect to V-REP remote server
-clientID = vrep.simxStart('192.168.1.111', 19997, True, True, 5000, 5)
-   
-if clientID !=-1:
-    print ('Connected to remote API server')
-    
-    res = vrep.simxAddStatusbarMessage(
-        clientID, "40823231",
-        vrep.simx_opmode_oneshot)
-           
-    if res not in (vrep.simx_return_ok, vrep.simx_return_novalue_flag):
-        print("Could not add a message to the status bar.")
-           
-    opmode = vrep.simx_opmode_oneshot_wait
-      
-    vrep.simxStartSimulation(clientID, opmode)
-    ret,shaft1=vrep.simxGetObjectHandle(clientID,"shaft_1",opmode)
-    ret,shaft2=vrep.simxGetObjectHandle(clientID,"shaft_2",opmode)
-    ret,shaft3=vrep.simxGetObjectHandle(clientID,"shaft_3",opmode)
- 
-    while True:
-        if keyboard.is_pressed("w"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft1,2,opmode)
-            print("w")
-             
-        if keyboard.is_pressed("s"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft1,0,opmode)
-            print("s")
-             
-        if keyboard.is_pressed("a"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft2,2,opmode)
-            print("a")
- 
-        if keyboard.is_pressed("b"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft2,0,opmode)
-            print("b")
-             
-        if keyboard.is_pressed("c"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft3,0.1,opmode)
-            print("c")
- 
-        if keyboard.is_pressed("z"):
-            vrep.simxSetJointTargetVelocity(clientID,shaft3,0,opmode)
-            print("z")            
-else:
-    print ('Failed connecting to  remote API server')
-    print ('End')
-</pre>
-<br />task1 << <a href='task1.html'>Previous</a> <a href='W11.html'>Next</a> >> W11</div>
+    <div id="tipue_search_content">W12 零件 << <a href='W12 零件.html'>Previous</a> <a href='迷宮.html'>Next</a> >> 迷宮<br /><h1>彈珠檯</h1>
+<p>第一版</p>
+<p>主體</p>
+<p><img caption="false" height="475" src="./../images/彈珠檯組合圖.png" width="500"/></p>
+<p>擊球機構</p>
+<p><img alt="" height="369" src="./../images/擊球機構.png" width="500"/></p>
+<p>往復機構</p>
+<p><img alt="" height="379" src="./../images/往復機構.png" width="500"/></p>
+<br />W12 零件 << <a href='W12 零件.html'>Previous</a> <a href='迷宮.html'>Next</a> >> 迷宮</div>
         
     <!-- footer -->
       <div class="container">
